@@ -10,23 +10,24 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     />
     <!-- imported style -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="fibonacci_body">
     <div class="container">
       <h1>Fibonacci Sequence</h1>
       <div id="output" class="mb-2"></div>
-      <div>
-          <label for="fiboNum"
-            >Enter a number to change the max value for the Fibonacci
-            Sequence:</label
-          >
-          <input type="number" id="fiboNum" />
-          <button onclick="printFibonacci()">Print</button>
-      </div>
+      <form onsubmit="printFibonacci()">
+        <label for="fiboNum"
+          >Enter a number to change the max value for the Fibonacci
+          Sequence:</label
+        >
+        <input type="number" id="fiboNum" />
+        <button onclick="printFibonacci()">Print</button>
+      </form>
     </div>
     <script>
       function printFibonacci() {
+        event.preventDefault()
         var input = document.querySelector("input");
         var output = document.querySelector("#output");
         output.textContent = fibonacci(input.value).join(", ");
