@@ -3,7 +3,6 @@
     margin: 30px;
     background-color: black;
     font-size: 18px;
-    font-family: "Source Sans Pro", sans-serif;
     color: white;
     letter-spacing: 2px;
   }
@@ -17,7 +16,7 @@
     text-align: center;
     width: 100%;
     margin: auto;
-    margin-bottom: 40px !important;
+    margin-bottom: 40px;
   }
 
   .fiboNum {
