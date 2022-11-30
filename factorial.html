@@ -24,20 +24,26 @@
         var input = document.querySelector("input");
         var output = document.getElementById("factorialOutput");
 
-        if(input.value >= 0){
-            getFactorial(input.value)
-            output.innerHTML = getFactorial(input.value)
+        if (input.value >= 0 && input.value < 171) {
+          getFactorial(input.value);
+          output.innerHTML =
+            "Factorial of " + input.value + " is " + getFactorial(input.value);
+        }else if(input.value >= 171 ){
+            output.innerHTML = "Overflow Error"
+        }
+        else{
+            output.innerHTML =
+            "Factorial must be of a Positive Number"
         }
       }
 
-      function getFactorial(num){
-        if(num < 1){
-            return 1
-        }else{
-           return num * getFactorial(num -1)
+      function getFactorial(num) {
+        if (num < 1) {
+          return 1;
+        } else {
+          return num * getFactorial(num - 1);
         }
       }
-
     </script>
   </body>
 </html>
