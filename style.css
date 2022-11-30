@@ -1,4 +1,5 @@
-.fibonacci_body {
+.fibonacci_body,
+.factorial_body {
     text-align: center;
     margin: 30px;
     background-color: black;
@@ -8,18 +9,19 @@
   }
 
   h1 {
-    font-family: "Nanum Brush Script", cursive;
     font-size: 4rem;
   }
 
-  #output {
+  #output,
+  #factorialOutput {
     text-align: center;
     width: 100%;
     margin: auto;
     margin-bottom: 40px;
   }
 
-  .fiboNum {
+  .fiboNum,
+  .factNum {
     border: none;
     text-align: center;
     color: white;

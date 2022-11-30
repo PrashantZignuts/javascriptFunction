@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- imported style -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="factorial_body">
+    <div class="container">
+      <h1>Factorial Function</h1>
+      <div id="factorialOutput" class="mb-2"></div>
+      <form onsubmit="printFactorial()">
+        <label for="factNum">Enter a number to get Factorial:</label>
+        <input type="number" id="factNum" />
+        <button onclick="printFactorial()">Print</button>
+      </form>
+    </div>
+    <script>
+      function printFactorial() {
+        event.preventDefault();
+        var input = document.querySelector("input");
+        var output = document.getElementById("factorialOutput");
+
+        if(input.value >= 0){
+            getFactorial(input.value)
+            output.innerHTML = getFactorial(input.value)
+        }
+      }
+
+      function getFactorial(num){
+        if(num < 1){
+            return 1
+        }else{
+           return num * getFactorial(num -1)
+        }
+      }
+
+    </script>
+  </body>
+</html>
